@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.vscode/
+.streamlit/secrets.toml
+*.log
+*.tmp
+*.zst
+*.json.zst
+evals/predictions_*.jsonl
+evals/results/
