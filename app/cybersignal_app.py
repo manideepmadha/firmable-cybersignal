@@ -13,12 +13,10 @@ DEFAULT_AI_BASE_URL = "https://openrouter.ai/api/v1"
 
 def get_secret(section: str, key: str, env_name: str | None = None, default: str | None = None):
     try:
-        if hasattr(st, "secrets"):
-            sec = st.secrets.get(section, {})
-            if isinstance(sec, dict):
-                value = sec.get(key)
-                if value not in (None, ""):
-                    return value
+        if section in st.secrets:
+            value = st.secrets[section][key]
+            if value not in (None, ""):
+                return value
     except Exception:
         pass
 
