@@ -10,4 +10,3 @@ venv/
 *.zst
 *.json.zst
 evals/predictions_*.jsonl
-evals/results/
